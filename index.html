@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Trabajo Práctico No 1 - Manejo de la Plataforma e-Campus USFX | Materia: Sistemas de Información Geográfica (SIS426) - Nelva Adalit Mora Barrionuevo">
+  <title>Trabajo Práctico N° 1 | SIS426 - USFX | Nelva Adalit Mora</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Claymorphism Dedicated Styles -->
+  <link rel="stylesheet" href="./src/styles/clay-tp1.css">
+</head>
+<body class="clay-theme">
+
+  <!-- Background Decorative Clay Spheres -->
+  <div class="clay-blob blob-1"></div>
+  <div class="clay-blob blob-2"></div>
+  <div class="clay-blob blob-3"></div>
+
+  <!-- Header / Top Bar -->
+  <header class="tp-header">
+    <div class="tp-container tp-header-content">
+      <div class="tp-brand">
+        <div class="clay-icon-badge">
+          <i data-lucide="globe-2"></i>
+        </div>
+        <div>
+          <span class="tp-subtitle">USFX - Facultad de Tecnología</span>
+          <h1 class="tp-title">SIS426: Sistemas de Información Geográfica</h1>
+        </div>
+      </div>
+      <div class="tp-header-actions no-print">
+        <button class="clay-btn clay-btn-primary" id="btn-print-pdf">
+          <i data-lucide="printer"></i> Imprimir / PDF
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="tp-container">
+    
+    <!-- Hero / Header Card -->
+    <section class="clay-card tp-hero-card">
+      <div class="tp-hero-header">
+        <div class="clay-pill"><i data-lucide="award"></i> Trabajo Práctico N° 1</div>
+        <span class="tp-date"><i data-lucide="calendar"></i> Entrega: 31 de Agosto de 2026 – 23:30</span>
+      </div>
+      <h2 class="tp-hero-heading">Manejo de la Plataforma Educativa e-Campus USFX y Aplicación de SIG con Inteligencia Artificial</h2>
+      <p class="tp-hero-desc">
+        Presentación oficial del Trabajo Práctico N° 1 para la asignatura de <strong>Sistemas de Información Geográfica (SIS426)</strong>. Incluye Hoja de Vida institucional, Certificación Digital e-campus verificada y la propuesta técnica de integración SIG + Deep Learning para la prevención de riesgo sísmico.
+      </p>
+      <div class="tp-meta-grid">
+        <div class="clay-badge-info">
+          <i data-lucide="user"></i> <strong>Estudiante:</strong> Nelva Adalit Mora Barrionuevo
+        </div>
+        <div class="clay-badge-info">
+          <i data-lucide="graduation-cap"></i> <strong>Carrera:</strong> Ingeniería de Sistemas (8.º Semestre)
+        </div>
+        <div class="clay-badge-info">
+          <i data-lucide="book-open"></i> <strong>Docente:</strong> Ing. Franz Villalpando A.
+        </div>
+      </div>
+    </section>
+
+    <!-- CV Section Container -->
+    <div class="tp-cv-grid">
+
+      <!-- LEFT COLUMN: Profile & Details -->
+      <aside class="tp-cv-sidebar">
+
+        <!-- 1. Datos Personales -->
+        <section class="clay-card section-card">
+          <div class="section-title-wrap">
+            <div class="clay-icon-small"><i data-lucide="user-check"></i></div>
+            <h3>1. Datos Personales</h3>
+          </div>
+          
+          <div class="profile-avatar-wrap">
+            <div class="clay-avatar-frame">
+              <img src="./src/images/portrait.png" alt="Nelva Adalit Mora Barrionuevo" id="profile-img">
+            </div>
+            <span class="avatar-status-badge"><i data-lucide="check-circle"></i> Fotografía Fondo Blanco</span>
+          </div>
+
+          <ul class="info-list">
+            <li>
+              <span class="info-label">Nombre Completo:</span>
+              <strong class="info-value">Nelva Adalit Mora Barrionuevo</strong>
+            </li>
+            <li>
+              <span class="info-label">Universidad:</span>
+              <span class="info-value">U.M.R.P.S.F.X.CH. (USFX)</span>
+            </li>
+            <li>
+              <span class="info-label">Facultad:</span>
+              <span class="info-value">Tecnología</span>
+            </li>
+            <li>
+              <span class="info-label">Carrera:</span>
+              <span class="info-value">Ingeniería de Sistemas</span>
+            </li>
+            <li>
+              <span class="info-label">Semestre:</span>
+              <span class="info-value">8.º Semestre (Promedio: 98.3 / 100)</span>
+            </li>
+            <li>
+              <span class="info-label">Correo Electrónico:</span>
+              <a href="mailto:nelvaadalitmorabarrionuevo@gmail.com" class="info-link">nelvaadalitmorabarrionuevo@gmail.com</a>
+            </li>
+            <li>
+              <span class="info-label">Ubicación:</span>
+              <span class="info-value">Sucre, Chuquisaca, Bolivia</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 3. Idiomas -->
+        <section class="clay-card section-card">
+          <div class="section-title-wrap">
+            <div class="clay-icon-small"><i data-lucide="languages"></i></div>
+            <h3>3. Idiomas</h3>
+          </div>
+          <div class="skill-pills-grid">
+            <div class="clay-skill-box">
+              <span class="skill-name">Español</span>
+              <span class="skill-level">Nativo / Lengua Materna</span>
+            </div>
+            <div class="clay-skill-box">
+              <span class="skill-name">Inglés</span>
+              <span class="skill-level">EF SET B2 / Avanzado (Verificado)</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 6. Habilidades o Competencias -->
+        <section class="clay-card section-card">
+          <div class="section-title-wrap">
+            <div class="clay-icon-small"><i data-lucide="cpu"></i></div>
+            <h3>6. Habilidades y Competencias</h3>
+          </div>
+          <div class="tech-tags-wrapper">
+            <span class="clay-tag"><i data-lucide="map-pin"></i> PostgreSQL / PostGIS</span>
+            <span class="clay-tag"><i data-lucide="brain"></i> PyTorch & Deep Learning</span>
+            <span class="clay-tag"><i data-lucide="satellite"></i> Radar InSAR & Sentinel-1</span>
+            <span class="clay-tag"><i data-lucide="check-square"></i> QA Testing & Kiwi TCMS</span>
+            <span class="clay-tag"><i data-lucide="network"></i> Tailscale & Taiga Agile</span>
+            <span class="clay-tag"><i data-lucide="code-2"></i> Python / Node.js / Vite</span>
+            <span class="clay-tag"><i data-lucide="layout"></i> UI Claymorphic & Web GIS</span>
+          </div>
+        </section>
+
+        <!-- 8. Referencias Personales -->
+        <section class="clay-card section-card">
+          <div class="section-title-wrap">
+            <div class="clay-icon-small"><i data-lucide="users"></i></div>
+            <h3>8. Referencias Personales</h3>
+          </div>
+          <div class="references-list">
+            <div class="reference-item">
+              <strong>Ing. Franz Villalpando A.</strong>
+              <p>Director de Carrera / Docente SIS426 – USFX</p>
+            </div>
+            <div class="reference-item">
+              <strong>Coordinación WTM / GDG Sucre</strong>
+              <p>Google Developer Groups & Women Techmakers Bolivia</p>
+            </div>
+          </div>
+        </section>
+
+      </aside>
+
+      <!-- RIGHT COLUMN: Education, Work, Certificate & Main Essay -->
+      <main class="tp-cv-main">
+
+        <!-- 2. Formación Académica -->
+        <section class="clay-card section-card">
+          <div class="section-title-wrap">
+            <div class="clay-icon-small"><i data-lucide="graduation-cap"></i></div>
+            <h3>2. Formación Académica</h3>
+          </div>
+          <div class="timeline-list">
+            <div class="timeline-item">
+              <div class="timeline-badge"><i data-lucide="book-open"></i></div>
+              <div class="timeline-content">
+                <h4>Ingeniería de Sistemas (8.º Semestre)</h4>
+                <span class="timeline-institution">Universidad Mayor, Real y Pontificia de San Francisco Xavier de Chuquisaca (USFX)</span>
+                <p>Estudiante destacada de 1.º lugar de promoción con un promedio de <strong>98.3/100</strong>. Especialización en desarrollo de software, inteligencia artificial, arquitectura de datos y requerimientos.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-badge"><i data-lucide="award"></i></div>
+              <div class="timeline-content">
+                <h4>Aspire Leaders Program Fellow (Harvard Faculty-Founded)</h4>
+                <span class="timeline-institution">Aspire Institute – Cambridge, MA, USA</span>
+                <p>Seleccionada en la cohorte global 2026 del programa internacional fundado por profesores de la Universidad de Harvard. Formación en liderazgo estratégico, resolución de problemas complejos e impacto social.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-badge"><i data-lucide="briefcase"></i></div>
+              <div class="timeline-content">
+                <h4>Técnico Medio en Turismo y Hotelería</h4>
+                <span class="timeline-institution">Formación Técnica Superior</span>
+                <p>Desarrollo de competencias en gestión organizativa, planificación de recursos, servicio y administración de proyectos.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. Experiencia Profesional -->
+        <section class="clay-card section-card">
+          <div class="section-title-wrap">
+            <div class="clay-icon-small"><i data-lucide="briefcase"></i></div>
+            <h3>4. Experiencia Profesional</h3>
+          </div>
+          <div class="timeline-list">
+            <div class="timeline-item">
+              <div class="timeline-badge"><i data-lucide="shield-check"></i></div>
+              <div class="timeline-content">
+                <h4>QA Trainee – Aseguramiento de Calidad de Software</h4>
+                <span class="timeline-institution">Proyectos de Software & Pruebas Remotas</span>
+                <p>Diseño y ejecución de casos de prueba (test cases), documentación de errores con Kiwi TCMS, gestión ágil en Taiga y ejecución de pruebas en redes seguras con túneles Tailscale.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-badge"><i data-lucide="sparkles"></i></div>
+              <div class="timeline-content">
+                <h4>Content Lead & Voluntaria – Women Techmakers (IWD Sucre 2026)</h4>
+                <span class="timeline-institution">WTM Sucre & GDG Sucre</span>
+                <p>Liderazgo de estrategia de contenidos multicanal, producción audiovisual y coordinación logística para el evento internacional International Women's Day (#BreakThePattern) en la Facultad de Tecnología USFX.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. Otros Cursos y Seminarios (CERTIFICADO ECAMPUS USFX) -->
+        <section class="clay-card section-card cert-card-highlight">
+          <div class="section-title-wrap">
+            <div class="clay-icon-small cert-icon"><i data-lucide="award"></i></div>
+            <h3>5. Otros Cursos y Seminarios – Certificación e-Campus USFX</h3>
+          </div>
+
+          <div class="cert-banner-grid">
+            <div class="cert-img-container" id="open-cert-modal-btn">
+              <img src="./public/images/certificado_ecampus_usfx.png" alt="Certificado e-campus USFX Nelva Adalit Mora Barrionuevo" class="cert-thumbnail">
+              <div class="cert-zoom-overlay">
+                <i data-lucide="zoom-in"></i> Ver Certificado Oficial HD
+              </div>
+            </div>
+
+            <div class="cert-details-box">
+              <div class="clay-pill-success"><i data-lucide="check-circle-2"></i> Requisito Cumplido</div>
+              <h4 class="cert-title-text">Curso Universitario e-campus U.S.F.X.</h4>
+              <p class="cert-desc">
+                Certificación oficial emitida por la Universidad Mayor, Real y Pontificia de San Francisco Xavier de Chuquisaca tras haber completado exitosamente las unidades temáticas y el cuestionario de certificación digital de la plataforma educativa e-campus.
+              </p>
+
+              <div class="cert-meta-table">
+                <div class="cert-meta-row">
+                  <span><i data-lucide="user"></i> Estudiante:</span>
+                  <strong>Mora Barrionuevo Nelva Adalit</strong>
+                </div>
+                <div class="cert-meta-row">
+                  <span><i data-lucide="shield"></i> Código Verificación:</span>
+                  <code class="code-badge">DbRkKjePnM</code>
+                </div>
+                <div class="cert-meta-row">
+                  <span><i data-lucide="calendar"></i> Fecha de Emisión:</span>
+                  <strong>31 de agosto de 2026</strong>
+                </div>
+                <div class="cert-meta-row">
+                  <span><i data-lucide="file-badge"></i> Emisor:</span>
+                  <strong>Ing. Franz Villalpando A. (Director de Carrera)</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7. INQUIETUD DE APLICACIÓN DE SIG (> 500 PALABRAS) -->
+        <section class="clay-card section-card essay-card">
+          <div class="essay-header">
+            <div class="section-title-wrap">
+              <div class="clay-icon-small essay-icon"><i data-lucide="globe"></i></div>
+              <h3>7. Inquietud de Aplicación de los SIG en la Solución de Problemáticas del Mundo Real</h3>
+            </div>
+            <div class="word-counter-badge" id="word-count-badge">
+              <i data-lucide="file-text"></i> <span id="word-count-num">0</span> Palabras (Mínimo: 500)
+            </div>
+          </div>
+
+          <div class="essay-content" id="essay-text">
+            <h4 class="essay-topic-title">
+              Sistema Geoespacial de Predicción de Riesgo Sísmico y Detección de Deformación Terrestre mediante Análisis de Imágenes Satelitales (InSAR / Sentinel-1) e Inteligencia Artificial (Deep Learning en PyTorch) Integrado a PostGIS/SIG
+            </h4>
+
+            <p class="essay-paragraph">
+              A lo largo de mi formación académica en la carrera de Ingeniería de Sistemas de la Universidad Mayor, Real y Pontificia de San Francisco Xavier de Chuquisaca, me he especializado en la convergencia entre la ingeniería de software, la inteligencia artificial y el procesamiento eficiente de datos. Al estudiar la materia de Sistemas de Información Geográfica (SIS426), identifico una oportunidad trascendental para canalizar estas competencias tecnológicas hacia la solución de una de las problemáticas geofísicas más críticas y complejas del mundo actual: la predicción temprana de vulnerabilidad sísmica y la detección automatizada de deformaciones terrestres producidas por el movimiento de fallas tectónicas activas y procesos de subsidencia del suelo.
+            </p>
+
+            <p class="essay-paragraph">
+              Bolivia y la región andina se encuentran situadas en una zona de intensa actividad geotectónica debido a la subducción de la Placa de Nazca debajo de la Placa Sudamericana, así como a la presencia de sistemas de fallas corticales en las zonas del Subandino y la Cordillera Oriental. A pesar de que los terremotos mayores suelen ocurrir a profundidades considerables en el altiplano, las fallas superficiales activas representan un peligro latente para la infraestructura urbana, carreteras y comunidades en departamentos como Chuquisaca, Cochabamba y Santa Cruz. La limitación histórica de los métodos de monitoreo tradicionales radica en su alta dependencia de estaciones sismológicas terrestres puntuales, las cuales, aunque precisas en tiempo, carecen de una cobertura espacial continua y masiva sobre grandes extensiones territoriales.
+            </p>
+
+            <p class="essay-paragraph">
+              Para resolver esta limitante, mi propuesta técnica consiste en el diseño e implementación de un marco de trabajo geoespacial inteligente que integra la tecnología de <strong>Interferometría de Radar de Apertura Sintética (InSAR)</strong> a partir de imágenes satelitales del programa Copernicus (Sentinel-1 de la Agencia Espacial Europea) con algoritmos avanzados de <strong>Deep Learning</strong> desarrollados en <strong>PyTorch</strong> y estructurados sobre la base de datos espacial <strong>PostgreSQL con la extensión PostGIS</strong>.
+            </p>
+
+            <p class="essay-paragraph">
+              En la primera fase del flujo geoespacial, el sistema descarga automáticamente pares de imágenes de radar Sentinel-1 en banda C que cubren las zonas de interés en el territorio nacional. Al procesar las fases electromagnéticas de las imágenes de radar capturadas en distintas fechas sobre la misma zona geográfica, se generan interferogramas diferenciados capaces de medir desplazamientos y deformaciones en la superficie terrestre con una precisión subcentimétrica (del orden de milímetros por año). Estos datos de interferometría continua representan mapas tridimensionales de deformación topográfica en formato ráster.
+            </p>
+
+            <p class="essay-paragraph">
+              La innovación central de este proyecto radica en la integración de redes neuronales convolucionales profundas (arquitecturas U-Net y ResNet modificadas) programadas en PyTorch. El modelo de Inteligencia Artificial es entrenado para analizar de forma automatizada los mapas ráster de deformación InSAR junto con datos de aceleración del suelo y registros del catálogo sísmico histórico del Observatorio San Calixto. La red neuronal aprende a clasificar e identificar patrones no lineales de micro-deformaciones atípicas en el terreno que anteceden a eventos telúricos o deslizamientos de tierra masivos, delimitando automáticamente los polígonos de mayor susceptibilidad a colapsos o agrietamientos urbanos.
+            </p>
+
+            <p class="essay-paragraph">
+              Una vez que el modelo predictivo de Deep Learning genera los mapas de riesgo y delimitaciones de falla, los resultados se exportan en geometrías vectoriales (`GEOMETRY` y `GEOGRAPHY`) directamente hacia una base de datos <strong>PostGIS</strong>. Mediante el uso de funciones espaciales SQL como `ST_Intersects`, `ST_Buffer` y `ST_DWithin`, la base de datos cruza geográficamente los polígonos de riesgo sísmico detectados por la IA con las capas vectoriales de la infraestructura crítica de la ciudad (redes de agua potable, líneas eléctricas, escuelas, hospitales y densidad poblacional). De este modo, el sistema calcula de manera instantánea el índice de vulnerabilidad socioeconómica y genera rutas óptimas de evacuación y despacho de emergencia utilizando algoritmos de análisis de redes geográficas (`pgRouting`).
+            </p>
+
+            <p class="essay-paragraph">
+              Finalmente, toda la información se despliega en una interfaz web espacial interactiva (Web GIS) accesible para autoridades de gestión de riesgos, ingenieros civiles y la población en general. Esta plataforma permite visualizar mapas de calor tridimensionales de las áreas de deformación en tiempo real, recibir alertas tempranas automatizadas y tomar decisiones informadas en el ordenamiento territorial urbano de Chuquisaca y Bolivia. Esta inquietud científica demuestra cómo la integración rigurosa entre los Sistemas de Información Geográfica, el cómputo satelital y la Inteligencia Artificial puede salvaguardar vidas humanas, proteger la infraestructura nacional y elevar el nivel de la investigación académica de la USFX ante desafíos de escala global.
+            </p>
+          </div>
+        </section>
+
+        <!-- DASHBOARD INTERACTIVO DE SIMULACIÓN DE RIESGO SÍSMICO -->
+        <section class="clay-card section-card demo-simulation-card">
+          <div class="section-title-wrap">
+            <div class="clay-icon-small demo-icon"><i data-lucide="activity"></i></div>
+            <h3>Simulador Interactivo: Visor Geoespacial SIG + IA (Predicción Sísmica)</h3>
+          </div>
+          <p class="sim-desc">
+            Demostración funcional del módulo de visualización espacial InSAR + PyTorch para el análisis de deformación geotectónica en la región de Chuquisaca y valles de Bolivia.
+          </p>
+
+          <div class="sim-dashboard-grid">
+            <div class="sim-control-panel">
+              <h4><i data-lucide="sliders"></i> Parámetros del Modelo</h4>
+              
+              <div class="sim-field">
+                <label for="sim-region">Región de Análisis:</label>
+                <select id="sim-region" class="clay-select">
+                  <option value="sucre">Sucre – Cuenca e Infraestructura Urbana</option>
+                  <option value="chaco">Subandino / Falla de Mandeyapecua</option>
+                  <option value="cochabamba">Zona de Falla Cochabamba - Valles</option>
+                </select>
+              </div>
+
+              <div class="sim-field">
+                <label for="sim-satellite">Satélite de Entrada:</label>
+                <select id="sim-satellite" class="clay-select">
+                  <option value="sentinel1">Copernicus Sentinel-1 (Radar SAR InSAR)</option>
+                  <option value="sentinel2">Sentinel-2 Multispectral (10m)</option>
+                </select>
+              </div>
+
+              <div class="sim-field">
+                <label>Umbral de Sensibilidad IA (PyTorch U-Net):</label>
+                <input type="range" id="sim-threshold" min="50" max="99" value="85" class="clay-range">
+                <span class="range-val" id="sim-threshold-val">85% Precisión</span>
+              </div>
+
+              <button class="clay-btn clay-btn-primary btn-run-sim" id="btn-run-simulation">
+                <i data-lucide="play-circle"></i> Ejecutar Inferencia de IA en PostGIS
+              </button>
+            </div>
+
+            <div class="sim-map-view">
+              <div class="sim-map-overlay-header">
+                <span class="sim-badge-live"><i data-lucide="radio"></i> POSTGIS GEO-DB ONLINE</span>
+                <span class="sim-coords">LAT: -19.0429 | LON: -65.2558</span>
+              </div>
+
+              <div class="sim-visual-display" id="sim-visual-display">
+                <div class="sim-radar-sweep"></div>
+                <div class="sim-fault-line"></div>
+                <div class="sim-hotspot spot-1" title="Zona de Deformación Subcentimétrica Detectada por InSAR"></div>
+                <div class="sim-hotspot spot-2" title="Polígono de Riesgo Estructural PostGIS"></div>
+                <div class="sim-data-box">
+                  <div class="sim-stat">
+                    <span>Deformación Terrestre:</span>
+                    <strong id="sim-stat-def">-4.2 mm/año</strong>
+                  </div>
+                  <div class="sim-stat">
+                    <span>Índice de Riesgo (IA):</span>
+                    <strong id="sim-stat-risk" style="color: #ff4a5a;">ALTO (89.4%)</strong>
+                  </div>
+                  <div class="sim-stat">
+                    <span>Polígonos en PostGIS:</span>
+                    <strong id="sim-stat-polys">12 Vectores Registrados</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="tp-footer">
+    <div class="tp-container tp-footer-content">
+      <p>&copy; 2026 Nelva Adalit Mora Barrionuevo – Universidad Mayor, Real y Pontificia de San Francisco Xavier de Chuquisaca.</p>
+      <p class="footer-sub">Materia: Sistemas de Información Geográfica (SIS426) | Carrera de Ingeniería de Sistemas</p>
+    </div>
+  </footer>
+
+  <!-- Modal Certificado HD -->
+  <div class="clay-modal-overlay" id="cert-modal-overlay" style="display: none;">
+    <div class="clay-modal-content">
+      <div class="clay-modal-header">
+        <h3>Certificado Oficial e-Campus USFX</h3>
+        <button class="clay-modal-close" id="close-cert-modal">&times;</button>
+      </div>
+      <div class="clay-modal-body">
+        <img src="./public/images/certificado_ecampus_usfx.png" alt="Certificado e-Campus USFX Full HD" class="cert-modal-img">
+        <div class="cert-modal-footer">
+          <span>Código de Autenticidad: <code>DbRkKjePnM</code></span>
+          <a href="./public/images/certificado_ecampus_usfx.png" download="Certificado_eCampus_USFX_Nelva_Mora.png" class="clay-btn clay-btn-primary">
+            <i data-lucide="download"></i> Descargar Certificado Imagen
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dedicated Interactivity JavaScript -->
+  <script src="./src/js/tp1.js"></script>
+</body>
+</html>
