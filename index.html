@@ -11,8 +11,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   
-  <!-- Lucide Icons -->
+  <!-- Lucide Icons & Supabase SDK -->
   <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   
   <!-- Claymorphism Dedicated Styles (Pink Theme) -->
   <link rel="stylesheet" href="./src/styles/clay-tp1.css">
@@ -31,12 +32,15 @@
         <div class="clay-icon-badge">
           <i data-lucide="globe-2"></i>
         </div>
-        <div>
+        <div class="tp-brand-text">
           <span class="tp-subtitle">USFX - Facultad de Ciencias y Tecnología</span>
           <h1 class="tp-title">SIS426: Sistemas de Información Geográfica</h1>
         </div>
       </div>
       <div class="tp-header-actions no-print">
+        <a href="https://nelva-adalit-portfolio.vercel.app" target="_blank" rel="noopener noreferrer" class="clay-btn clay-btn-secondary">
+          <i data-lucide="external-link"></i> Portafolio Principal
+        </a>
         <button class="clay-btn clay-btn-primary" id="btn-print-pdf">
           <i data-lucide="printer"></i> Imprimir / Guardar PDF
         </button>
@@ -108,7 +112,7 @@
             </li>
             <li>
               <span class="info-label">Teléfono:</span>
-              <span class="info-value">+591 73418452</span>
+              <a href="tel:+59173418452" class="info-link">+591 73418452</a>
             </li>
             <li>
               <span class="info-label">Correo Electrónico:</span>
@@ -119,12 +123,16 @@
               <span class="info-value">Sucre, Chuquisaca, Bolivia</span>
             </li>
             <li>
+              <span class="info-label">Portafolio Web:</span>
+              <a href="https://nelva-adalit-portfolio.vercel.app" target="_blank" rel="noopener noreferrer" class="info-link">nelva-adalit-portfolio.vercel.app</a>
+            </li>
+            <li>
               <span class="info-label">LinkedIn:</span>
-              <a href="https://linkedin.com/in/nelva-adalit-mora-barrionuevo-215337331" target="_blank" class="info-link">in/nelva-adalit-mora-barrionuevo</a>
+              <a href="https://linkedin.com/in/nelva-adalit-mora-barrionuevo-215337331" target="_blank" rel="noopener noreferrer" class="info-link">in/nelva-adalit-mora-barrionuevo</a>
             </li>
             <li>
               <span class="info-label">GitHub:</span>
-              <a href="https://github.com/NelvaAdalit" target="_blank" class="info-link">github.com/NelvaAdalit</a>
+              <a href="https://github.com/NelvaAdalit" target="_blank" rel="noopener noreferrer" class="info-link">github.com/NelvaAdalit</a>
             </li>
           </ul>
         </section>
@@ -221,7 +229,7 @@
             <div class="clay-icon-small"><i data-lucide="sparkles"></i></div>
             <h3>Perfil Profesional</h3>
           </div>
-          <p class="essay-paragraph" style="font-size: 0.94rem; margin-bottom: 0;">
+          <p class="essay-paragraph" style="font-size: 0.94rem; margin-bottom: 0;" id="bio-summary-text">
             Estudiante de 8.º semestre de Ingeniería de Sistemas (top de promoción, 98.3% bachillerato) y QA Trainee especializada en Aseguramiento de la Calidad, Desarrollo Web (WordPress), Ingeniería de Requerimientos y Desarrollo Asistido por IA. Experiencia probada en pruebas funcionales/APIs (Kiwi TCMS, Postman, Tailscale), plataformas e-commerce, modelado de procesos (BPMN/UML) y crecimiento de comunidades digitales (+11k seguidores). Fellow 2026 del Aspire Leaders Program (Harvard Institute) e inglés B2 verificado (EF SET, Reading C1).
           </p>
         </section>
@@ -310,21 +318,21 @@
           </div>
         </section>
 
-        <!-- 5. Otros Cursos y Seminarios (COMPLETO - BASE DE DATOS & CV) -->
+        <!-- 5. Otros Cursos y Seminarios (COMPLETO - CONEXIÓN CON SUPABASE & LOCAL FALLBACK) -->
         <section class="clay-card section-card">
           <div class="section-title-wrap">
             <div class="clay-icon-small"><i data-lucide="award"></i></div>
             <h3>5. Otros Cursos y Seminarios</h3>
           </div>
 
-          <div class="timeline-list">
+          <div class="timeline-list" id="certs-timeline-container">
             <!-- Curso e-campus USFX -->
             <div class="timeline-item">
               <div class="timeline-badge"><i data-lucide="check-circle"></i></div>
               <div class="timeline-content">
                 <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:2px;">
                   <h4 style="margin:0;">Curso Universitario e-Campus U.S.F.X.</h4>
-                  <span class="clay-pill-success"><i data-lucide="check"></i> Certificado Enviado</span>
+                  <span class="clay-pill-success"><i data-lucide="check"></i> Requisito Enviado en PDF</span>
                 </div>
                 <span class="timeline-institution">Universidad Mayor, Real y Pontificia de San Francisco Xavier de Chuquisaca | 31 de Agosto de 2026</span>
                 <p>Capacitación oficial en uso efectivo de la plataforma educativa e-campus USFX. Código de verificación: <code class="code-badge">DbRkKjePnM</code>.</p>
@@ -403,13 +411,13 @@
           </div>
         </section>
 
-        <!-- Proyectos Destacados (del CV Oficial) -->
+        <!-- Proyectos Destacados (del CV Oficial & Supabase) -->
         <section class="clay-card section-card">
           <div class="section-title-wrap">
             <div class="clay-icon-small"><i data-lucide="folder-git-2"></i></div>
             <h3>Proyectos Destacados del CV</h3>
           </div>
-          <div class="timeline-list">
+          <div class="timeline-list" id="projects-timeline-container">
             <div class="timeline-item">
               <div class="timeline-badge"><i data-lucide="eye"></i></div>
               <div class="timeline-content">
