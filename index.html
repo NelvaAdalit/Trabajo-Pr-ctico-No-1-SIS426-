@@ -462,7 +462,7 @@
           </div>
         </section>
 
-        <!-- 7. INQUIETUD DE APLICACIÓN DE SIG (> 500 PALABRAS - PROPUESTA E IDEA) -->
+        <!-- 7. INQUIETUD DE APLICACIÓN DE SIG (> 500 PALABRAS - PROPUESTA EN DOS FASES) -->
         <section class="clay-card section-card essay-card">
           <div class="essay-header">
             <div class="section-title-wrap">
@@ -480,31 +480,27 @@
             </h4>
 
             <p class="essay-paragraph">
-              Como estudiante del 8.º semestre de la carrera de Ingeniería de Sistemas en la Universidad Mayor, Real y Pontificia de San Francisco Xavier de Chuquisaca, inicio la materia de Sistemas de Información Geográfica (SIS426) con un profundo interés técnico por explorar cómo las herramientas espaciales pueden integrarse con mis competencias previas en desarrollo de software, visión artificial y aprendizaje profundo. Al revisar los fundamentos de la asignatura y las directrices planteadas por la cátedra, presento la siguiente propuesta e inquietud de investigación sobre una problemática de alto impacto geofísico: la aplicación de técnicas de Inteligencia Artificial sobre imágenes satelitales y bases de datos espaciales para el análisis del riesgo sísmico y la deformación del suelo.
+              Como estudiante del 8.º semestre de la carrera de Ingeniería de Sistemas en la Universidad Mayor, Real y Pontificia de San Francisco Xavier de Chuquisaca, inicio la materia de Sistemas de Información Geográfica (SIS426) con un profundo interés técnico por explorar cómo las herramientas espaciales pueden integrarse con mis competencias previas en desarrollo de software y análisis de datos. Al revisar los fundamentos de la asignatura, presento la siguiente propuesta e inquietud de investigación sobre una problemática de alto impacto geofísico: el análisis de deformación del suelo mediante datos satelitales y bases de datos espaciales para la detección de riesgo sísmico.
             </p>
 
             <p class="essay-paragraph">
-              En mi experiencia práctica previa he tenido la oportunidad de desarrollar modelos de Inteligencia Artificial utilizando redes neuronales en <strong>PyTorch y OpenCV</strong> (como el proyecto de clasificación de residuos reciclables en tiempo real que desarrollé). Sin embargo, reconozco que aún no domino la extensión espacial <strong>PostGIS</strong> ni el procesamiento avanzado de capas vectoriales/ráster complejas, por lo que planteo esta inquietud precisamente como una <strong>idea de proyecto integrador</strong> que aspiro a fundamentar y aprender a lo largo de este curso de SIG.
+              La problemática concreta que motiva esta propuesta es la vulnerabilidad sísmica en la región andina y los valles de Bolivia. Nuestro país está influenciado por la subducción de la Placa de Nazca y la presencia de sistemas de fallas geológicas activas en la Cordillera Oriental y el Subandino, como la Falla de Mandeyapecua en Chuquisaca. Los métodos sismológicos tradicionales dependen de estaciones terrestres puntuales que, si bien son precisas, no ofrecen una cobertura continua sobre grandes extensiones territoriales ni permiten visualizar patrones de deformación topográfica lenta que preceden a deslizamientos o fallas estructurales.
             </p>
 
             <p class="essay-paragraph">
-              La problemática concreta que motiva esta propuesta es la vulnerabilidad sísmica en la región andina y los valles de Bolivia. Nuestro país está influenciado por la subducción de la Placa de Nazca y la presencia de sistemas de fallas geológicas activas en la Cordillera Oriental y el Subandino (como el sistema de fallas de Cochabamba o la Falla de Mandeyapecua en Chuquisaca). Los métodos sismológicos tradicionales dependen de estaciones terrestres puntuales que, si bien son precisas, no ofrecen una cobertura continua sobre grandes extensiones territoriales ni permiten visualizar patrones de deformación topográfica lenta que preceden a deslizamientos o fallas estructurales.
+              Frente a este desafío, y siendo realista con el tiempo y las herramientas disponibles para un proyecto de curso, planteo un desarrollo en dos fases.
             </p>
 
             <p class="essay-paragraph">
-              Frente a este desafío, la idea de investigación consiste en combinar el análisis de imágenes satelitales de radar —específicamente la tecnología de <strong>Interferometría de Radar de Apertura Sintética (InSAR)</strong> del satélite Sentinel-1 del programa Copernicus— con modelos de aprendizaje profundo en PyTorch. La técnica InSAR permite comparar fases electromagnéticas de imágenes tomadas en distintas fechas para detectar micro-desplazamientos de la superficie terrestre a escala milimétrica.
+              <strong>Fase 1 (proyecto actual de SIS426):</strong> el foco está en el análisis espacial en PostGIS, que es el núcleo de la materia. Se utilizan datos de deformación del suelo ya procesados a partir de interferometría de radar (InSAR) de fuentes públicas como el portal COMET-LiCS, que trabaja con imágenes del satélite Sentinel-1 del programa Copernicus. Sobre estos datos se aplica un umbral de deformación para delimitar zonas de riesgo geotécnico, evitando así el procesamiento crudo de señales de radar, que corresponde a un campo especializado aparte (interferometría, desenrollado de fase, corrección atmosférica) fuera del alcance de un solo semestre. Esas zonas de riesgo se cargan como polígonos en una base de datos PostgreSQL con extensión PostGIS, junto con capas de infraestructura crítica de la ciudad de Sucre obtenidas de OpenStreetMap: hospitales, vías principales y redes de agua. Utilizando funciones espaciales como <code>ST_Buffer</code>, <code>ST_Intersects</code> y <code>ST_DWithin</code>, se cruzan ambas capas para calcular un índice de riesgo por zona y visualizar los resultados en un mapa mediante QGIS.
             </p>
 
             <p class="essay-paragraph">
-              La propuesta metodológica contempla que la red neuronal (una arquitectura convolucional U-Net desarrollada en PyTorch) procese los interferogramas de deformación satelital junto con datos históricos de sismicidad del Observatorio San Calixto. La red entrenada aprendería a clasificar automáticamente zonas atípicas de subsidencia o abultamiento del suelo, delimitando polígonos de susceptibilidad geotectónica.
+              <strong>Fase 2 (siguiente semestre):</strong> una vez consolidado el dominio de PostGIS y el manejo de datos espaciales, la idea es incorporar el componente de inteligencia artificial que motivó la propuesta original: entrenar un modelo (por ejemplo, una arquitectura convolucional en PyTorch) que clasifique automáticamente zonas atípicas de subsidencia o abultamiento del suelo a partir de los interferogramas, reemplazando el umbral simple usado en la Fase 1 por una clasificación aprendida. Esta segunda fase también contemplaría contrastar los resultados con datos históricos de sismicidad del Observatorio San Calixto.
             </p>
 
             <p class="essay-paragraph">
-              Aquí es donde radica mi mayor expectativa de aprendizaje en SIS426: comprender cómo estructurar e importar esos resultados vectoriales en una base de datos espacial <strong>PostgreSQL con la extensión PostGIS</strong>. Me interesa aprender a utilizar funciones espaciales como `ST_Intersects`, `ST_Buffer` o `ST_DWithin` para cruzar los polígonos de deformación generados por la Inteligencia Artificial con las capas de infraestructura crítica urbana (redes de agua, energía, hospitales y vías de transporte de la ciudad de Sucre). De esta forma, se podrían calcular índices de riesgo espacial y diseñar modelos de rutas de evacuación ante emergencias.
-            </p>
-
-            <p class="essay-paragraph">
-              En conclusión, esta propuesta constituye la visión de cómo las habilidades que he logrado hasta la fecha en la carrera (programación, redes neuronales y QA) pueden potenciarse al adquirir el dominio de los Sistemas de Información Geográfica y PostGIS en la USFX. Considero que motivar este tipo de proyectos interdisciplinarios demuestra la capacidad de la ingeniería de sistemas para proponer soluciones tecnológicas innovadoras ante problemáticas reales del entorno social y ambiental.
+              En conclusión, esta propuesta refleja una visión de proyecto que combina mis habilidades previas en desarrollo de software con el dominio progresivo de los Sistemas de Información Geográfica y PostGIS que estoy adquiriendo en la USFX. Plantearlo en dos fases me permite entregar un resultado funcional y bien fundamentado dentro del tiempo del curso, sin sacrificar la ambición original del proyecto, que queda como línea de continuidad para semestres futuros.
             </p>
           </div>
         </section>
